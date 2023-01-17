@@ -281,7 +281,15 @@ local theme = lush(function(injected_functions)
 
     GitSignsAdd { fg = hsl(140, 40, 60) },
     GitSignsChange { fg = hsl(220, 40, 60) },
-    GitSignsDelete { fg = hsl(350, 40, 60) }
+    GitSignsDelete { fg = hsl(350, 40, 60) },
+    GitSignsCurrentLineBlame { fg = palette.f2, italic = true, bold = false },
+
+    TelescopeNormal { fg = Normal.fg, bg = hsl(30, 50, 97) },
+    TelescopeTitle { fg = palette.f2, bg = hsl(30, 50, 97) },
+    TelescopeBorder { fg = hsl(30, 40, 90), bg = hsl(30, 50, 97) },
+    TelescopePromptCounter { TelescopeTitle },
+    TelescopePromptPrefix { TelescopeTitle },
+    TelescopeMatching { bold = true }
 }
 end)
 
