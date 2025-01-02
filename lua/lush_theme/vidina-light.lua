@@ -170,9 +170,9 @@ local theme = lush(function(injected_functions)
 
     -- See :h lsp-highlight, some groups may not be listed, submit a PR fix to lush-template!
     --
-    -- LspReferenceText            { } , -- Used for highlighting "text" references
-    -- LspReferenceRead            { } , -- Used for highlighting "read" references
-    -- LspReferenceWrite           { } , -- Used for highlighting "write" references
+    LspReferenceText({ bg = palette.shadow }), -- Used for highlighting "text" references
+    LspReferenceRead({ bg = palette.shadow }), -- Used for highlighting "read" references
+    LspReferenceWrite({ bg = palette.shadow }), -- Used for highlighting "write" references
     -- LspCodeLens                 { } , -- Used to color the virtual text of the codelens. See |nvim_buf_set_extmark()|.
     -- LspCodeLensSeparator        { } , -- Used to color the seperator between two or more code lens.
     LspSignatureActiveParameter({ fg = palette.c3, bold = true }), -- Used to highlight the active parameter in the signature help. See |vim.lsp.handlers.signature_help()|.
@@ -271,15 +271,15 @@ local theme = lush(function(injected_functions)
     sym("@tag")({ fg = palette.p2, bold = true }), -- Tag
     sym("@tag.attribute")({ fg = palette.c3 }), -- Tag
 
-    sym("rainbowcol1")({ bg = hsl(210, 80, 95) }),
-    sym("rainbowcol2")({ bg = hsl(30, 80, 95) }),
-    sym("rainbowcol3")({ bg = hsl(210, 80, 95) }),
-    sym("rainbowcol4")({ bg = hsl(30, 80, 95) }),
-    sym("rainbowcol5")({ bg = hsl(210, 80, 95) }),
-    sym("rainbowcol6")({ bg = hsl(30, 80, 95) }),
-    sym("rainbowcol7")({ bg = hsl(210, 80, 95) }),
-    sym("rainbowcol8")({ bg = hsl(30, 80, 95) }),
-
+    -- sym"rainbowcol1" { fg = palette.contrast_text },
+    -- sym"rainbowcol2" { fg = complement },
+    -- sym"rainbowcol3" { fg = palette.contrast_text },
+    -- sym"rainbowcol4" { fg = complement },
+    -- sym"rainbowcol5" { fg = palette.contrast_text },
+    -- sym"rainbowcol6" { fg = complement },
+    -- sym"rainbowcol7" { fg = palette.contrast_text },
+    -- sym"rainbowcol8" { fg = complement },
+    --
     GitSignsAdd({ fg = hsl(140, 40, 60) }),
     GitSignsChange({ fg = hsl(220, 40, 60) }),
     GitSignsDelete({ fg = hsl(350, 40, 60) }),
